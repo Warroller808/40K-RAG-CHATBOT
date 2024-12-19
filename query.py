@@ -119,8 +119,7 @@ try:
         print("Documents added to vectorstore.")
         vectorstore.persist()
     else:
-        pass
-        # print("Vectorstore found.", vectordict)
+        print("Vectorstore found.")
 
     retriever = vectorstore.as_retriever()
     print("retriever created successfully")
@@ -176,6 +175,7 @@ web_search_tool = TavilySearchResults(k=3)
 
 ### Generate Answer  ###
 # Prompt
+# !!! Final prompt, telling the assistant to stay concise with 3 max sentences
 prompt = hub.pull("rlm/rag-prompt")
 
 
